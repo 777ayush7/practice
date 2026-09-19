@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+body {
+    background-color: white;
+    color: black;
+    overflow-y: hidden; 
+}
+header{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    justify-content: space-between;
+    
+}
+
+.navbar{
+    display: flex;
+    gap: 40px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;  
+    
+}
+main{
+    padding: 10px 20px;
+
+}
+
+.navbar a.active-page {
+    font-weight: bold !important;
+    text-decoration: underline !important;
+    text-underline-offset: 2px; /* Underline ko thoda gap dene ke liye */
+}
