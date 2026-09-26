@@ -3,15 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cool page</title>
+    <title>cool website</title>
     <link rel="stylesheet" href="STYLE.CSS">
+
+    <style>.only-flex-container {
+  display: flex;
+  /* Items sit side-by-side horizontally. Change to 'column' to stack them vertically */
+  flex-direction: row; 
+  /* Centers items along the main horizontal axis */
+  justify-content: center; 
+  /* Space between flex items */
+  gap: 15px; 
+  padding: 20px;
+}
+
+.flex-item {
+  background-color: #10b981;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  /* Allows the items to expand or shrink gracefully based on content */
+  flex: 0 1 auto; 
+}
+</style>
 </head>
 <body>
     <header class="header" id="global-header"></header>
      <main>
         <h4>HAVE</h4>
-        <p>ab aap isko sabse niche rakhoge, toh browser pehle poora HTML structure (aapka khali header box aur baaki content) load kar lega. Uske baad jab JavaScript chalega, toh use saare HTML elements aaram se mil jayenge aur header perfectly fit ho jayega.</p>
-
+      <div class="only-flex-container">
+        <div class="flex-item">Short</div>
+        <div class="flex-item">Medium Content</div>
+        <div class="flex-item">Much Longer Content Item</div>
+      </div>
 
      </main>
      <script src="script.js"></script>

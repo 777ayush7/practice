@@ -5,15 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cool page</title>
     <link rel="stylesheet" href="STYLE.CSS">
+<style>
+
+.only-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.grid-item {
+  /* 1. Essential fixes for <a> tags to behave like boxes */
+  display: block;           /* Forces the link to take up the full box area */
+  text-decoration: none;    /* Removes the default underline */
+  color: black;             /* Overrides default blue link color */
+
+  /* 2. Your original styling */
+  background-color: white;
+  padding: 40px 20px;
+  text-align: center;
+  border: 2px solid black; 
+  border-radius: 8px;
+  font-weight: bold;
+  
+  /* 3. Smooth interactivity */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* 4. Hover effect (When a user glides their mouse over it) */
+.grid-item:hover {
+  background-color: black;
+  color: white;
+  transform: translateY(-4px); /* Lifts the box up slightly */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Adds a premium shadow */
+}
+
+/* 5. Click effect (When the user physically presses down) */
+.grid-item:active {
+  transform: translateY(-1px);
+}
+</style>
+
 </head>
 <body>
     <header class="header" id="global-header"></header>
-     <main>
-        <h4>DASHBOARD</h4>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime, laboriosam perspiciatis sint error mollitia, nihil enim quod nam alias nisi harum illo perferendis earum rerum, inventore autem iste iusto corrupti expedita repellat nemo natus.</p>
-
+     <main class="only-grid-container">
+        <a href="about.html" class="grid-item">About Us</a>
+         <a href="services.html" class="grid-item">Our Services</a>
+         <a href="portfolio.html" class="grid-item">Portfolio</a>
+         <a href="contact.html" class="grid-item">Contact</a>
 
      </main>
+
      <script src="script.js"></script>
 </body>
 </html>
